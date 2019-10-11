@@ -1,0 +1,77 @@
+.orderReview {
+    background: #f5f5f5;
+    margin: 0 0 20px;
+    padding: 22px 30px;
+}
+.summaryRow {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas: 'label value';
+    grid-template-columns: 70fr 30fr;
+    margin: 15px 0;
+    font-size: 14px;
+}
+.summaryRowValue {
+    display: block;
+    grid-area: value;
+    width: 100%;
+    text-align: right;
+}
+.cartItemsList .title,
+.cartItemsListActive .title {
+    border-bottom: 1px solid #d1d1d1;
+    padding: 10px 0;
+    display: block;
+    position: relative;
+}
+.cartItemsList .title button:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -3px;
+}
+.cartItemsListActive .title button:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(-135deg);
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: 0;
+}
+.cartItemsList .title button,
+.cartItemsListActive .title button,
+.cartItemsList .title button:hover,
+.cartItemsListActive .title button:hover,
+.cartItemsList .title button:focus,
+.cartItemsListActive .title button:focus {
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: auto;
+    text-align: left;
+    justify-content: left;
+    display: block;
+    width: 100%;
+    box-shadow: none;
+    color: #000;
+    position: relative;
+}
+.cartItemsList .cartItemsListContent {
+    display: none;
+}
+.cartItemsListActive .cartItemsListContent {
+    display: block;
+}

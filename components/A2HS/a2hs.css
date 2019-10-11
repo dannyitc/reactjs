@@ -1,0 +1,42 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.a2hsPopup {
+    border: 1px solid #eee;
+    color: black;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    z-index: 10000;
+    line-height: 20px;
+    padding-right: 40px;
+
+}
+.root {
+    display: none;
+}
+.root_open {
+    display: block;
+}
+.a2hsPopup button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.popupMsg {
+    padding-left: 40px;
+    position: relative;
+}
+.popupMsg img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -16px;
+}
+.share {
+    color: primary__color;
+    position: relative;
+    top: 5px;
+}

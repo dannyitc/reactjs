@@ -1,0 +1,24 @@
+.shipTo {
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+.shipTo address {
+    line-height: 27px
+}
+.sidebarTitle {
+    position: relative;
+    border-bottom: 1px solid #cccccc;
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+}
+.sidebarTitle button, .sidebarTitle button:hover, .sidebarTitle button:focus {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    min-width: 0;
+    color: #000;
+}

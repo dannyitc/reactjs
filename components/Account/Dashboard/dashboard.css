@@ -1,0 +1,120 @@
+.dashboardContactInfo, .dashboardAddresses {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas: 'leftSection rightSection';
+    grid-template-columns: 50fr 50fr;
+    margin-bottom: 1rem;
+}
+.dashboardContent h1{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.dashboardContent h2 {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e8e8e8;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.dashboardContent .contactInfo, .dashboardContent .defaultBillingAddress, .dashboardContent .defaultShippingAddress {
+    background: #f5f5f5;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.contactInfo .boxTitle,
+.defaultBillingAddress .boxTitle,
+.defaultShippingAddress .boxTitle {
+    margin-bottom: 1rem;
+    display: block;
+    font-size: 14px;
+}
+.dashboardAddressesTitle {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 0.5rem;
+    grid-template-areas: 'title action';
+    grid-template-columns: 80fr 15fr;
+
+}
+.dashboardAddressesTitle button {
+    background: #000;
+    color: #fff;
+    height: 2rem;
+}
+address {
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+}
+.boxActions {
+    margin-top: 1rem;
+}
+.boxActions button:last-child, .boxActions button:last-child:hover, .boxActions button:last-child:focus {
+    padding: 0;
+    border: none;
+}
+.boxActions button, .boxActions button:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    height: auto;
+    padding: 0;
+    float: left;
+    font-size: 13px;
+    line-height: normal;
+    color: #005a98;
+    min-width: 0;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #333333;
+    text-align: left;
+}
+.boxActions button:hover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    height: auto;
+    padding: 0;
+    color: #333;
+    padding-right: 10px;
+    border-right: 1px solid #333333;
+}
+.popupAddress {
+    display: block;
+}
+.hidePopupButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.popupWrapper .actions {
+    text-align: center;
+}
+@media (max-width: 375px) {
+    .dashboardContactInfo, .dashboardAddresses {
+        display: block;
+        width: 100%;
+    }
+}
+@media (min-width: 770px) {
+    .popupWrapper {
+        padding: 15px 30px;
+        overflow: hidden;
+    }
+    .addressContent {
+        max-height: 400px;
+        overflow-x: auto;
+    }
+}
+@media (max-width: 769px) {
+    .popupWrapper {
+        padding: 30px 15px 20px;
+    }
+    .addressContent {
+        max-height: 400px;
+        overflow-x: auto;
+    }
+}

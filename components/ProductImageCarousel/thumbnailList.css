@@ -1,0 +1,25 @@
+.root {
+    align-content: stretch;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 0;
+    grid-template-columns: repeat(auto-fit, 1rem);
+    justify-content: center;
+    margin-top: 1rem;
+    z-index: 1;
+}
+
+@media (min-width: 1024px) {
+    .root {
+        display: grid;
+        grid-area: items;
+        grid-gap: 0;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 0.5rem;
+    }
+}
+@media (max-width: 769px) {
+    .root {
+        grid-gap: 0.2rem;
+    }
+}

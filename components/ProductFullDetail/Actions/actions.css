@@ -1,0 +1,28 @@
+@value colors: "../../variables.css";
+@value primary__color, secondary__color from colors;
+.productAddTo {
+    margin: 0.5rem 1.5rem 0;
+    grid-area: addto;
+}
+.linkAddTo {
+    line-height: 2rem;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    display: inline-flex;
+}
+.linkAddTo span {
+    display: inline-flex;
+    padding-right: 0.2rem;
+}
+.linkAddTo:hover {
+    color: primary__color;
+}
+.itemActionLoading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 99;
+}

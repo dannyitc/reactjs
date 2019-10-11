@@ -1,0 +1,83 @@
+/* Tigren PWA Policies Block */
+.tigren-pwa-policies {
+    display: grid;
+    grid-area: items;
+    grid-gap: 0;
+    grid-template-columns: repeat(4, 1fr);
+}
+.tigren-pwa-policies > div{
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas: 'icon content';
+    grid-template-columns: 20fr 75fr;
+}
+.tigren-pwa-policies .div-content strong {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 3px;
+    font-weight: bold;
+    display: block;
+}
+/* Tigren PWA Store Links Block */
+.tigren-pwa-store-links {
+    display: grid;
+    grid-area: items;
+    grid-gap: 0;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 10px;
+}
+.tigren-pwa-store-links h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.tigren-pwa-store-links ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.tigren-pwa-store-links ul li a:hover{
+    color: #f90;
+    text-decoration: underline;
+}
+.tigren-pwa-store-links .social-links ul li {
+    display: inline-block;
+}
+/* Tigren brand logo */
+
+/* Tigren PWA Product Promotion Block */
+.tigren-pwa-product-promotion {
+    padding: 20px 20px 10px;
+    background: #eee;
+}
+.tigren-pwa-product-promotion > div{
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas: 'icon content';
+    grid-template-columns: 10fr 75fr;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+@media (max-width: 769px) {
+    .tigren-pwa-policies, .tigren-pwa-store-links {
+        display: block;
+    }
+    .tigren-pwa-policies > div{
+        margin-bottom: 20px;
+    }
+    .tigren-pwa-store-links > div {
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+    .tigren-pwa-policies, .tigren-pwa-store-links {
+        display: grid;
+        grid-area: items;
+        grid-gap: 0;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 10px;
+    }
+}

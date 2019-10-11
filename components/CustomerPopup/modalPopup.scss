@@ -1,0 +1,32 @@
+.react-modal {
+  top: 0;
+  left: 0;
+}
+@media (min-width: 770px) {
+  .react-modal .react-modal-body {
+    width: 640px;
+  }
+}
+.react-modal .react-modal-body-close:after, .react-modal .react-modal-body-close:before {
+  background: #000;
+}
+.react-modal .react-modal-body-close {
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 767px) {
+  .react-modal .react-modal-body-close {
+    background-color: #a5a7a8!important;
+    z-index: 999;
+    top: 10px;
+  }
+  .react-modal .react-modal-body-close:after, 
+  .react-modal .react-modal-body-close:before {
+      background: #fff;
+      
+  }
+}

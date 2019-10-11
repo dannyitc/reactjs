@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&display=swap');
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&display=swap')
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('https://fonts.googleapis.com/css?family=Oswald:300,400,700&display=swap')
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap')
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --venia-anim-bounce: cubic-bezier(0.5, 1.8, 0.9, 0.8);
+    --venia-anim-in: cubic-bezier(0, 0, 0.2, 1);
+    --venia-anim-out: cubic-bezier(0.4, 0, 1, 1);
+    --venia-anim-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --venia-border: 224, 224, 224;
+    --venia-error: 192, 18, 63;
+    --venia-error-alt: 255, 226, 234;
+    --venia-font: Muli, -apple-system, BlinkMacSystemFont, sans-serif;
+    --venia-grey: 246, 246, 246;
+    --venia-grey-dark: 209, 209, 209;
+    --venia-orange: 241, 99, 33;
+    --venia-teal: 0, 115, 120;
+    --venia-teal-alt: 224, 240, 241;
+    --venia-teal-dark: 0, 104, 108;
+    --venia-teal-light: 212, 243, 238;
+    --venia-text: 33, 33, 33;
+    --venia-text-alt: 112, 112, 112;
+    --venia-text-hint: 158, 158, 158;
+    --venia-text-spot: 255, 99, 51;
+    --venia-warning-dark: 249, 93, 94;
+    --venia-warning-light: 254, 229, 232;
+}
+
+html {
+    background-color: white;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: white;
+    color: #777;
+    margin: 0;
+    padding: 0;
+}
+
+.modalIsOpen {
+    overflow: hidden;
+}
+
+body,
+input,
+select,
+textarea {
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;   
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+dl,
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+dd,
+dt {
+    margin: 0;
+}
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-family: var(--venia-font);
+    font-size: 100%;
+    padding: 0;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-appearance: none;
+}
+
+button:disabled {
+    cursor: default;
+    touch-action: none;
+}
+
+.pageContainer {
+    font-size: 15px;
+    line-height: normal;
+}
+.sidebarBlocks {
+    margin: 30px 0 0;
+}
+.sidebarBlock {
+    margin: 30px 0;
+    clear: both;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.blockTitle {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.blockTitle strong {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 24px;
+}
+.blockContent {
+
+}
+@media (min-width: 1200px) {
+    .pageContainer {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 769px) {
+
+}

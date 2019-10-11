@@ -1,0 +1,29 @@
+.checkoutWrapper {
+    overflow: hidden;
+    padding: 1rem;
+}
+.checkoutHeading {
+    text-align: left;
+}
+@media (min-width: 1200px) {
+    .checkoutWrapper {
+        max-width: 1170px;
+        margin: 30px auto;
+        padding: 0;
+    }
+}
+@media (min-width: 770px) {
+    .checkoutSkeletonWrapper .progressBar {
+        margin: 30px 0 50px;
+    }
+    .checkoutSkeletonWrapper .checkoutSkeletonContent{
+        align-items: start;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-areas: 'detailedInfo relatedProducts';
+        grid-template-columns: 1fr 0.4fr;
+        grid-template-rows: repeat(5, min-content) 1fr [fold];
+        padding: 0;
+        grid-gap: 1rem;
+    }
+}

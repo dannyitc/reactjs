@@ -1,0 +1,113 @@
+.root {
+    display: grid;
+    grid-template-areas:
+        'actions'
+        'items';
+    grid-template-columns: 1fr;
+    line-height: 1;
+    width: 100%;
+}
+
+.items {
+    display: grid;
+    grid-area: items;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 10px;
+}
+
+.galleryOneItem {
+    grid-template-columns: repeat(1, 1fr);
+}
+.oneItem {
+    display: grid;
+    grid-area: items;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 10px;
+}
+.twoItems {
+    display: grid;
+    grid-area: items;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+}
+.threeItems {
+    display: grid;
+    grid-area: items;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10px;
+}
+.fourItems {
+    display: grid;
+    grid-area: items;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10px;
+}
+.homeItems {
+    display: grid;
+    grid-area: items;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 10px;
+}
+.homeItems > div {
+    border: none;
+}
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 99;
+}
+@media (max-width: 640px) {
+    .items,
+    .homeItems,
+    .threeItems,
+    .fourItems {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        grid-gap: 0.5rem;
+    }
+    .oneItem,
+    .twoItems {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (min-width: 641px) and (max-width: 991px) {
+    .items,
+    .homeItems,
+    .oneItem,
+    .twoItems,
+    .threeItems,
+    .fourItems {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        grid-gap: 0.5rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .items,
+    .homeItems,
+    .oneItem,
+    .twoItems,
+    .threeItems,
+    .fourItems {
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        grid-gap: 0.5rem;
+    }
+}
+@media (min-width: 1200px) {
+    /* .homeItems > div:hover {
+        z-index: 2;
+        box-shadow: none;
+        border-color: transparent;
+    } */
+}

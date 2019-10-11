@@ -1,0 +1,13 @@
+mutation contactUs(
+    $name : String!,
+    $email: String!,
+    $telephone: String,
+    $comment: String!
+) {
+    contactUs(
+        name : $name,
+        email: $email,
+        telephone:  $telephone,
+        comment: $comment
+    )
+}

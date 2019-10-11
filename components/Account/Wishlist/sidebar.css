@@ -1,0 +1,24 @@
+.formWishlistItems {
+    position: relative;
+    clear: both;
+}
+.actions > button, .actions > button:hover, .actions > button:focus {
+    padding: 0;
+    width: auto;
+    display: inline-block;
+    background: transparent;
+    height: auto;
+    min-width: 0;
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 99;
+}

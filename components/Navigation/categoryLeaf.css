@@ -1,0 +1,102 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+
+.root {
+    align-items: stretch;
+    display: flex;
+    height: 40px;
+    padding: 0 1.5rem 0 5px;
+    width: 100%;
+    font-size: 14px;
+    position: relative;
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+}
+.mainNav .root{
+    height: 40px;
+    color: #ffffff;
+}
+.mainNav .root a {
+    margin: 0;
+    color: #ffffff;
+    border-top: none;
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    padding: 0 5px;
+    
+}
+.root:hover {
+    background-color: #D69229;
+    color: #fff;
+}
+
+.inactive {
+    position: fixed;
+    visibility: hidden;
+}
+
+.text {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    height: 40px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.button,
+.link {
+    composes: root;
+}
+.optionToggleMenu {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    height: 100%;
+}
+
+.hasChildren:hover > .optionToggleMenu,
+.hasActive > .optionToggleMenu {
+    color: #fff;
+}
+
+.menuExpanded {
+
+}
+
+@media (min-width: 770px) {
+    .text {
+        border: none;
+    }
+}
+@media (max-width: 769px) {
+    .optionToggleMenu {
+        width: 40px;
+        right: 0;
+        height: 50px;
+    }
+    .hasActive > .optionToggleMenu,
+    .hasChildren:hover > .optionToggleMenu {
+        background-color: primary__color;
+        color: #fff;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .root {
+        color: #b0b0b0;
+        font-size:13px;
+    }
+}
+@media (max-width: 767px){
+    .root{
+        color: #777 !important;
+        padding: 0 15px;
+        font-size: 13px;
+    }
+
+}   

@@ -1,0 +1,52 @@
+query productSearch($inputText: String!, $pageSize: Int, $currentPage: Int, $categoryId: String) {
+    products(search: $inputText, pageSize: $pageSize, currentPage: $currentPage, filter: { category_id: { eq: $categoryId } }) {
+        items {
+            id
+            name
+            small_image {
+                url
+            }
+            url_key
+            price {
+                    regularPrice {
+                        amount {
+                            value
+                        }
+                        adjustments {
+                            amount {
+                                value
+                            }
+                            code
+                            description
+                        }
+                    }
+                    minimalPrice {
+                        amount {
+                            value
+                        }
+                        adjustments {
+                            amount {
+                                value
+                            }
+                            code
+                            description
+                        }
+                    }
+                }
+            special_price,
+            sku,
+            type_id,
+            is_available
+        }
+        total_count
+        filters {
+            name
+            filter_items_count
+            request_var
+            filter_items {
+                label
+                value_string
+            }
+        }
+    }
+}

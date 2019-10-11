@@ -1,0 +1,28 @@
+.empty {
+    display: table;
+    width: 100%;
+    min-height: 200px;
+    text-align: center;
+}
+.sideBarEmpty {
+    font-size: 14px;
+    text-align: center;
+}
+.empty p {
+    display: table-cell;
+    vertical-align: middle;
+}
+.actions {
+}
+.actions button{
+    padding: 0 20px;
+    min-width: 0;
+}
+.actions button:last-child{
+    float: right;
+    background: transparent;
+    color: #000;
+}
+.actions button:last-child:hover {
+    text-decoration: underline
+}

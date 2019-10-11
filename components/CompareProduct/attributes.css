@@ -1,0 +1,8 @@
+.attributes table > tbody tr > th {
+    padding: 5px 30px 10px 0;
+    text-align: left;
+}
+.attributes table > tbody tr > td {
+    padding: 5px 5px 10px 5px;
+    text-align: left;
+}

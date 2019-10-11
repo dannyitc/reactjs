@@ -1,0 +1,27 @@
+.root {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.sliderWrapper {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+.sliderPrevArrow,
+.sliderNextArrow {
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+}
+.prevArrButton,
+.nextArrButton {
+    outline: none;
+}
+.sliderPrevArrow {
+    left: 0.5rem;
+}
+.sliderNextArrow {
+    right: 0.5rem;
+}

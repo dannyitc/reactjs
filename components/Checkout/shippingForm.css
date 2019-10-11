@@ -1,0 +1,76 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.root {
+}
+
+.body {
+    composes: body from './form.css';
+    grid-gap: 0.5rem;
+}
+
+.footer {
+    composes: footer from './form.css';
+    margin: 1rem 0;
+    text-align: right;
+}
+.footer button {
+    background-color: #eee;
+    color: #333;
+    border-radius: 0;
+    padding: 15px 17px;
+    border: none;
+    height: auto;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.footer button:hover {
+    background: primary__color;
+    color: #fff;
+}
+.heading {
+    font-size: 1.6rem;
+    border-bottom: 1px solid #e4e4e4;
+    font-weight: 500;
+    grid-column-end: span 2;
+    padding: 0 0 0.75rem 0;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+/* fields */
+
+.button {
+    text-transform: capitalize;
+}
+
+.shippingMethod {
+    grid-column-end: span 1;
+}
+.shippingMethod .shippingMethodTitle {
+    display: grid;
+    padding: 20px 0;
+    grid-gap: 1rem;
+    grid-template-areas: 'methodRadio methodDetails';
+    grid-template-columns: 5fr 95fr;
+    max-width: 500px;
+}
+.shippingMethod .shippingMethodTitle input,
+.shippingMethod .shippingMethodTitle label {
+    /* margin: 0; */
+    padding: 0;
+}
+.shippingMethod .shippingMethodTitle label {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 'methodPrice methodTitle carrierTitle';
+    grid-template-columns: 30fr 30fr 30fr;
+    width: 100%;
+    text-align: left;
+}
+@media (max-width: 769px) {
+    .footer button {
+        display: block;
+        width: 100%;
+    }
+}

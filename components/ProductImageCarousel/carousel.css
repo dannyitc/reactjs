@@ -1,0 +1,110 @@
+.root {
+}
+
+.imageContainer {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    min-height: 400px;
+}
+
+.currentImage {
+    background-color: rgb(var(--venia-grey));
+    border-radius: 2px;
+    width: 100%;
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.chevron-left,
+.chevron-right {
+    display: flex;
+    outline: none;
+    z-index: 1;
+}
+
+.chevron-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+.chevron-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+@media (min-width: 768px) and (max-width: 1200px){
+    .imageContainer img{
+        display: block;
+        max-width: 100%!important ;
+        height: auto!important
+    }
+}
+@media (max-width: 1024px) {
+    .imageContainer {
+        display: block;
+    }
+}
+@media (max-width: 480px) {
+    .imageContainer img{
+        display: block;
+        max-width: 100%;
+        height: auto!important
+    }
+}
+.sliderWrapper {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+.sliderPrevArrow,
+.sliderNextArrow {
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: transform, opacity, background-color;
+    width: 50px;
+    display: none;
+}
+.sliderWrapper:hover .sliderPrevArrow,
+.sliderWrapper:hover .sliderNextArrow {
+    display: block;
+}
+.prevArrButton,
+.nextArrButton {
+    outline: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;
+    color: #cccccc;
+}
+.sliderPrevArrow {
+    left: 0;
+}
+.sliderNextArrow {
+    right: 0;
+}
+.galleryImages {
+    display: grid;
+    grid-area: items;
+    grid-gap: 0.2rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 0.5rem;
+}
+@media (max-width:767px) {
+    .chevron-left,
+    .chevron-right {
+        display: none;
+    }
+}

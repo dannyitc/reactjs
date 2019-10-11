@@ -1,0 +1,21 @@
+.popupHeaderClass {
+    margin: 0 0 1rem;
+    text-align: center;
+}
+.title {
+    align-items: center;
+    display: inline-flex;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.popupClose {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+@media (max-width: 769px) {
+    .title {
+        font-size: 1rem;
+    }
+}

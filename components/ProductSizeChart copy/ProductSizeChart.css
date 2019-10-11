@@ -1,0 +1,241 @@
+.popupWrapper{
+
+}
+.popupContent{
+
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+}
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: black;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border: 1px solid #fff;;overflow:hidden;word-break:normal;}
+.tg .tg1fw3{font-weight:bold;background-color:#383734 !important;color:#d69229 !important;border-color:#383734;text-align:center !important; padding: 2px !important;}
+.tg .tgKycl{color:#383734;border-color:#383734;text-align:center !important; padding: 2px !important;}
+
+.tg .tgQk8y{font-weight:bold;background-color:#383734 !important;color:#d69229;border-color:#383734;text-align:center !important;vertical-align:middle; padding: 3px !important;}
+.tg .tgObcr{font-weight:bold;background-color:#383734 !important;color:#d69229 !important;border-color:#383734;text-align:center !important; padding: 2px !important;vertical-align:middle !important;}
+.tg .tg9rfm{border-color:#383734;text-align:center !important; padding: 2px !important;vertical-align:middle !important;}
+.tg .tgPel5{border-color:#383734;text-align:center !important; padding: 2px !important; vertical-align:middle !important;}
+
+
+.pschartSizechartLink {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    height: 30px;
+    display: inline-block;
+    min-width: 130px;
+    line-height: 27px;
+    text-align: center;
+    background-repeat: no-repeat !important;
+    background-position: 9px 6px !important;
+    padding-left: 35px;
+    padding-right: 15px;
+    margin: 10px 0 15px;
+    text-decoration: none;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box
+}
+
+.pschartSizechartLink:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: .6
+}
+
+.pschartShowsizes .pschartAddedoverlay {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 300;
+    background: #000;
+    opacity: .75;
+    filter: alpha(opacity=75);
+    -ms-filter: "alpha(opacity=75)";
+    filter: alpha(opacity=75)
+}
+
+.pschartShowsizes .pschartPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px;
+    overflow-y: auto;
+    text-align: center
+}
+
+.pschartShowsizes .pschartPopupInternal {
+    background-color: #fff;
+    padding: 30px;
+    min-width: 250px;
+    max-width: 800px;
+    display: inline-block
+}
+
+.pschartShowsizes .pschartContent {
+    position: relative;
+    padding: 0
+}
+
+.pschartShowsizes .pschartPopupInternal .close {
+    position: absolute;
+    right: -17px;
+    top: -19px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    background-color: #a5a7a8;
+    font-size: 13px
+}
+
+.pschartShowsizes .pschartPopupInternal .close:hover {
+    cursor: pointer
+}
+
+.pschartShowsizes .pschartPopupInternal h3 {
+    font-size: 18px;
+    text-align: left;
+    margin: 15px 0 10px;
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal
+}
+
+.pschartShowsizes .pschartPopupInternal p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: left
+}
+
+.pschartShowsizes .pschartPopupInternal .windowTitle {
+    color: #383838;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0 0 15px;
+    text-align: left;
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif
+}
+
+.pschartShowsizes .pschartContent .tableName {
+    font-size: 18px;
+    margin-bottom: 5px
+}
+
+.pschartShowsizes .pschartContent table td {
+    font-size: 12px;
+    text-align: left;
+    padding: 0 10px 0 0;
+    vertical-align: top
+}
+
+.pschartShowsizes .pschartContent table.measure td p {
+    border-bottom: 1px dotted #8f8f8f;
+    padding-bottom: 10px
+}
+
+.pschartShowsizes .pschartContent table.tableSize {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.pschartShowsizes .pschartContent table tr th {
+    background-color: #e0e0de
+}
+
+.pschartShowsizes .pschartContent table.tableSize th {
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center
+}
+
+.pschartShowsizes .pschartContent table.tableSize td {
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 11px;
+    line-height: 16px;
+    background: #f2f2f0;
+    text-align: center
+}
+
+.pschartShowsizes .pschartContent table.tableSize .size_name,
+.pschartShowsizes .pschartContent table.tableSize td:nth-child(1) {
+    vertical-align: middle;
+    background-color: #ebebe8;
+    font-weight: 700
+}
+
+.pschartShowsizes .pschartContent table.tableSize p {
+    margin: 5px 0;
+    text-align: left
+}
+
+.pschartShowsizes .pschartContent table.tableSize td[colspan="6"] {
+    font-weight: 700;
+    text-transform: none
+}
+@media screen and (min-width: 1200px ){
+    .pschartShowsizes{
+        max-height: 600px;
+        overflow: auto;
+    }
+}
+@media screen and (max-width:767px) {
+   
+}
+@media screen and (max-width:480px) {
+    .pschartShowsizes .pschartPopupInternal .close {
+        right: 0;
+        top: 0
+    }
+    .pschartShowsizes .pschartContent table.tableSize td {
+        text-transform: lowercase;
+        padding: 3px
+    }
+    .pschartShowsizes {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .pschartShowsizes .pschart-popup {
+        padding: 10px 5px
+    }
+    .pschartShowsizes .pschartPopupInternal {
+        margin: 0 auto;
+        padding: 10px
+    }
+}

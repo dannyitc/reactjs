@@ -1,0 +1,12 @@
+.root {
+}
+
+.emptyMsg {
+    background: #fdf0d5;
+    padding: 12px 20px;
+    color: #6f4400;
+    font-size: 1rem;
+}
+.emptyCart p {
+    line-height: 1.25;
+}

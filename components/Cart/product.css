@@ -1,0 +1,233 @@
+.cartItems {
+
+}
+.root {}
+.root_masked {
+    composes: root;
+}
+.image {
+    background-position: 50% 50%;
+    background-size: cover;
+    grid-area: image;
+}
+
+.name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    grid-area: name;
+    padding-top: 0.125rem;
+    color:#D69229;
+}
+.cartItemInfo {
+    position: relative;
+    align-content: start;
+    display: grid;
+    grid-gap: 0 1rem;
+    grid-template-areas:
+        'image name'
+        'image options';
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: min-content minmax(54px, 1fr) min-content;
+}
+.cartItemInfo img {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.options {
+    font-size: 13px;
+    grid-area: options;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    max-height: 54px;
+    overflow-y: auto;
+}
+
+.quantityRow {
+    align-items: center;
+    width: 100%;
+}
+
+.optionLabel {
+    display: block;
+}
+
+.quantity {
+    align-items: flex-end;
+    display: flex;
+    grid-column: 2 / span 1;
+    font-size: 13px;
+    align-self: end;
+    margin-top: 0.5rem;
+}
+
+.quantityOperator {
+    align-items: center;
+    color: rgb(var(--venia-text-alt));
+    display: inline-flex;
+    margin: 0 0.375rem;
+}
+
+.quantitySelect {
+    background: transparent;
+    width: 3.125rem;
+    padding: 0.3125rem;
+}
+.itemActions {
+    text-align: right;
+    margin: 1rem 0;
+}
+.editItemButton {
+    background: #eee;
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+.editItemButton:hover {
+    background: #f90;
+    color: #fff;
+}
+.removeItemButton {
+    font-size: 0.9rem;
+    text-indent: -9999px;
+    position: relative;
+    width: 20px;
+}
+.formQtyUpdate {
+    position: relative;
+}
+.updateButton {
+    margin-top: 0.5rem;
+}
+.cartInputQty label {
+    display: none;
+}
+.cartInputQty input {
+    height: 32px;
+    border: 1px solid rgb(var(--venia-border));
+    width: 45px;
+    text-align: center;
+    line-height: 32px;
+    margin: 0;
+}
+.price {
+    align-items: center;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans';
+}
+
+.modal {
+    position: absolute;
+    left: -24px;
+    right: -24px;
+    top: -7px;
+    bottom: -7px;
+    background-color: rgb(var(--venia-teal));
+    opacity: 0.1;
+    z-index: 2;
+}
+.cartItemWrap {
+    border-bottom: 1px solid #d1d1d1;
+}
+.cartItem .cartItemPrice,
+.cartItem .cartItemQty,
+.cartItem .cartItemSubtotal {
+    text-align: center
+}
+.cartItem .cartItemQty span {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    max-height: 40px;
+    display: block;
+}
+.cartItemQty input {
+    height: 32px;
+    border: 1px solid rgb(var(--venia-border));
+    width: 45px;
+    text-align: center;
+    line-height: 32px;
+    margin: 0;
+    font-size: 13px;
+}
+.removeItemButton:after,.removeItemButton:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 16px;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #D69229;
+    border-radius: 100%;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+}
+
+.removeItemButton:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.removeItemButton:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+@media (min-width: 770px) {
+    .cartItems .cartItem {
+        display: grid;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+        grid-template-areas: 'itemInfo itemPrice itemQty itemSubtotal';
+        grid-template-columns: auto 4rem 6rem 6rem;
+        padding: 10px;
+    }
+    .mItemHeading {
+        display: none;
+    }
+}
+@media (max-width: 769px) {
+    .cartItemWrap {
+        overflow: hidden;
+    }
+    .cartItems .cartItemWrap .cartItem {
+        text-align: center;
+    }
+    .cartItemInfo {
+        text-align: left;
+        margin: 0 0 1rem;
+    }
+    .cartItemPrice, .cartItemQty, .cartItemSubtotal {
+        float: left;
+        width: 33.33%;
+        position: relative;
+        padding-top: 30px;
+    }
+    .updateButton {
+        left: 80px;
+    }
+    .editItemButton {
+        position: static;
+        margin: 0 0.5rem 0 0;
+    }
+    .removeItemButton {
+        position: static;
+        margin: 0 0.5rem 0 0;
+    }
+    .mItemHeading {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        color: #000;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .itemActions {
+        float: left;
+        width: 100%;
+    }
+}

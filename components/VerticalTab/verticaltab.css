@@ -1,0 +1,52 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.tabListItem {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0;
+    background: #f5f5f5;
+    position: relative;
+}
+.tabListItem button, .tabListItem button:hover, .tabListItem button:focus {
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    color: #7d7d7d;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0 10px;
+    font-size: 13px;
+}
+.tabListItemActive button, .tabListItemActive button:hover, .tabListItemActive button:focus {
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0 10px;
+    font-size: 13px;
+}
+.tabListItemActive {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    color: #fff;
+    position: relative;
+    background: primary__color;
+}
+@media (min-width: 770px) {
+    .tabListItem, .tabListItemActive {
+        float: left;
+        width: 100%;
+    }
+}
+@media (max-width: 769px) {
+    .tabListItem, .tabListItemActive {
+        float: left;
+        width: 100%;
+    }
+}

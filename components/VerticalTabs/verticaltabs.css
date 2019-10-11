@@ -1,0 +1,19 @@
+@media (min-width: 770px) {
+    .customerTabClass .tabList, .customerTabClass .tabList {
+        display: grid;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+        grid-template-areas: 'customerNav pageContent';
+        grid-template-columns: 20fr 75fr;
+    }
+    .customerTabClass {
+        text-align: left;
+    }
+}
+@media (max-width: 769px) {
+    .customerTabClass .tabHead {
+        margin-bottom: 1rem;
+        clear: both;
+        overflow: hidden;
+    }
+}

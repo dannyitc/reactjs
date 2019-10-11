@@ -1,0 +1,79 @@
+@value colors: "../../variables.css";
+@value primary__color, secondary__color from colors;
+.opcProgressBar {
+    text-align: center;
+    counter-reset: i;
+}
+.progressBarItem {
+    display: inline-block;
+    width: 33%;
+    max-width: 185px;
+}
+.progressBarItem button {
+    padding-top: 45px;
+    position: relative;
+    width: 100%;
+    outline: none;
+}
+.progressBarItem button:before {
+    background: primary__color ;
+    top: 19px;
+    content: '';
+    height: 7px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.progressBarItem button:disabled:before,
+.progressBarItem button[disabled]:before {
+    background-color: #e4e4e4;
+}
+.progressBarItem button span:before,
+.progressBarItem button span:after {
+    background: primary__color ;
+    height: 38px;
+    margin-left: -19px;
+    width: 38px;
+    border-radius: 50%;
+    content: '';
+    left: 50%;
+    position: absolute;
+    top: 0;
+}
+.progressBarItem button:disabled span:before,
+.progressBarItem button[disabled] span:before {
+    background: #e4e4e4;
+}
+.progressBarItem button:disabled span:after,
+.progressBarItem button[disabled] span:after {
+    background: #fff;
+}
+.progressBarItem button span:after {
+    background: #ffffff;
+    height: 26px;
+    margin-left: -13px;
+    top: 6px;
+    width: 26px;
+    content: counter(i);
+    counter-increment: i;
+    color: #333333;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+@media (min-width: 770px) {
+    .opcProgressBar {
+        margin: 30px 0 50px;
+    }
+    .progressBarItem button {
+        min-width: 200px;
+    }
+}
+@media (max-width: 769px) {
+    .opcProgressBar {
+        margin-bottom: 1rem;
+    }
+    .progressBarItem button {
+        font-size: 0.75rem;
+    }
+}

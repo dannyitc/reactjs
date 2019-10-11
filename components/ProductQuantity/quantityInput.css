@@ -1,0 +1,6 @@
+.input {
+    composes: input from '../Field/field.css';
+    height: 3rem;
+    border: 1px solid rgb(var(--venia-border));
+    max-width: 3rem;
+}

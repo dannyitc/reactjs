@@ -1,0 +1,247 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.root {
+    composes: root from '../clickable.css';
+    background-color: #eee;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    height: 3rem;
+    min-width: 8.75rem;
+    padding: 0 0.5rem;
+    transition: opacity 256ms linear;
+}
+
+.root:hover {
+    background-color: primary__color;
+    color: #fff;
+}
+.btnAddCart,
+.btnAddToCartProduct{
+    position: relative;
+}
+.btnAddCart .content,
+.btnAddToCartProduct .content{
+    padding-left: 25px;
+}
+.btnAddCart .content:before {
+    content: url(./cart.svg);
+    position: absolute;
+    top: -3px;
+    left: -2px;
+}
+.filled {
+    background-color: #eee;
+    color: #333;
+}
+.btnAddToCartProduct .content:before {
+    content: url(./cart.svg);
+    position: absolute;
+    top: 3px;
+    left: 5px;
+}
+.btnAddToCartProduct {
+    font-family: "Oswald";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold !important;
+}
+.btnAddToCartProduct[disabled] {
+    filter: initial !important;
+    opacity: 1 !important;
+    --color: #fff !important;
+}
+.btnAddToCartProduct:hover {
+    background-color: #000 !important;
+}
+.btnSizeChart{
+    padding: 0;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid #D69229;
+    background-color: #FFFFFF;
+    background-image: url(./sizechart.svg);
+    color: #D69229;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    height: 30px;
+    display: inline-block;
+    min-width: 130px;
+    line-height: 27px;
+    text-align: center;
+    background-repeat: no-repeat !important;
+    background-position: 9px 6px !important;
+    padding-left: 35px;
+    padding-right: 15px;
+    text-decoration: none;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box;
+}
+.btnSizeChart:hover {
+    background-color: transparent;
+    color: #D69229;
+    opacity: 0.4;
+}
+.root:focus {
+    box-shadow: 0 0 0 2px rgb(var(--venia-teal-light)),
+        0 0 0.5rem 2px rgba(var(--venia-teal), 0.2);
+    outline: none;
+    transition-duration: 128ms;
+    --color: var(--venia-teal);
+}
+
+.root:active {
+    transition-duration: 128ms;
+    --color: var(--venia-teal-dark);
+}
+
+.root[name='update-qty-button'] {
+    padding: 8px 15px;
+    min-width: 40px;
+    font-size: 12px;
+    height: 32px;
+}
+.root[name='proceed-to-checkout'] {
+    width: 100%;
+    margin: 10px 0 0;
+    background: #333;
+    background-color: #D69229;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Oswald";
+    letter-spacing: 1px;
+    height: 38px;
+}
+.root[name='proceed-to-checkout']:hover {
+    background: #000;
+    color: #fff;
+}
+
+.root[name='add-to-wishlist-button'], .root[name='add-to-compare-button'] {
+    padding: 0;
+    width: auto;
+    display: inline-block;
+    background: transparent;
+    height: auto;
+    color: primary__color;
+}
+
+.root[name='view-order-details'] {
+    padding: 0;
+    width: auto;
+    display: inline-block;
+    background: transparent;
+    height: auto;
+    min-width: 0;
+    color: primary__color;
+    font-weight: bold;
+}
+
+.root[name='add-to-wishlist-button'] svg, .root[name='add-to-compare-button'] svg {
+    fill: #333;
+    stroke: #333;
+}
+
+.root[name='select-address'], .root[name='edit-address'] {
+    padding: 8px 15px;
+    min-width: 40px;
+    font-size: 12px;
+    height: 32px;
+    margin: 20px 0 0;
+    float: right;
+}
+.root[name='new-address'] {
+    padding: 8px 15px;
+    min-width: 40px;
+    font-size: 12px;
+    height: 32px;
+}
+.root[name='submit-to-search'], .root[name='submit-to-search']:hover, .root[name='submit-to-search']:focus {
+    height: 36px;
+    min-width: 0;
+    background: transparent;
+    color: #000;
+}
+
+.root[name='cancel-edit-billing'], .root[name='cancel-edit-billing']:focus {
+    background-color: transparent;
+    color: #006bb4;
+    font-size: 14px;
+    font-weight: normal;
+    height: 3rem;
+    min-width: 0;
+    padding: 0 2rem;
+    transition: opacity 256ms linear;
+    box-shadow: none;
+}
+
+.root[name='continue-shopping'] {
+    float: left;
+    display: none;
+}
+.root[name='clear-shopping-cart'] {
+    float: right;
+    margin-right: 10px; 
+    display: none;
+}
+.root[name='update-shopping-cart'] {
+    float: right;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    width: 170px;
+    height: 32px;
+    padding-right: 25px;
+}
+.root[name='update-shopping-cart'] svg {
+    display: none;
+}
+
+@media (max-width: 769px) {
+    .root[name='continue-shopping'],
+    .root[name='clear-shopping-cart'],
+    .root[name='update-shopping-cart'] {
+        clear: both;
+        width: 100%;
+        max-width: 60%;
+        margin: 0 0 1rem;
+        float: none;
+    }
+    .btnSizeChart {
+        margin-left: 0;
+    }
+    .btnAddToCartProduct {
+        margin-left: 10px;
+    }
+}
+
+.root[disabled] {
+    filter: grayscale(1);
+    opacity: 0.38;
+    pointer-events: none;
+    --color: var(--venia-grey-dark);
+}
+
+.content {
+    align-items: center;
+    display: inline-grid;
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    justify-items: center;
+}
+.content svg{
+    color: #7b7b7b;
+}
+
+/* derived classes */
+
+.root_normalPriority {
+    composes: root;
+}
+.root_highPriority {
+    composes: root filled;
+}

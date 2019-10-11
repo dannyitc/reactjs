@@ -1,0 +1,10 @@
+.root {
+    composes: root from '../clickable.css';
+    height: 3rem;
+    width: 3rem;
+}
+@media (min-width: 770px) {
+    .root {
+        display: none;
+    }
+}

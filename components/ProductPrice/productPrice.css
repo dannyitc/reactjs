@@ -1,0 +1,47 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+
+.priceBox {
+    margin-bottom: 10px;
+}
+.productPrice {
+    display: block;
+    font-weight: bold;
+    color: primary__color;
+    font-family: 'Oswald';
+    font-size: 21px;
+    letter-spacing: 0.005em;
+}
+.productPriceList {
+    display: inline-block;
+    color: #444;
+    font-family: 'Oswald';
+    font-size: 18px;
+    letter-spacing: 0.005em;
+    font-weight: 400;
+}
+.configTitle{
+    font-weight: bold;
+}
+.excludePrice {
+    font-weight: bold;
+    font-size: 14px;    
+}
+.excludePriceList {
+    font-size: 12px;
+    display: block;
+    margin: 10px 0 0;   
+}
+.regularPrice .regularTitle{
+    font-size: 1.6rem;
+}
+.regularPriceList {
+    text-decoration: line-through;
+    display: inline-block;
+    padding: 0 5px;
+    color: #999;
+    font-size: 12px;
+}
+.configTitleList{
+
+}

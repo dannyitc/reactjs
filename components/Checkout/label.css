@@ -1,0 +1,15 @@
+.root {
+    align-items: center;
+    color: #333;
+    display: inline-flex;
+    font-size: 0.8125rem;
+    line-height: 1rem;
+    padding: 0.125rem;
+}
+@media (min-width: 770px) {
+    .root {
+        padding: 6px 25px 0 0;
+        text-align: right;
+        width: 25.8%;
+    }
+}

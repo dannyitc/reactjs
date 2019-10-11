@@ -1,0 +1,26 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.root {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+.emptyTitle {
+    font-size: 13px;
+    line-height: 1.25;
+    padding: 20px 0;
+}
+.emptyTitle + button{
+    display: none;
+}
+
+.continue {
+    composes: root from '../Button/button.css';
+    color: white;
+    background-color: primary__color;
+}

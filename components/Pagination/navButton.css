@@ -1,0 +1,15 @@
+.buttonArrow {
+    grid-row-start: 1;
+    outline: none;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    padding-bottom: 1px;
+    color: #706f6c;
+}
+
+.buttonInactive {
+    composes: buttonArrow;
+    color: #999;
+}
+

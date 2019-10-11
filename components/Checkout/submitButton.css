@@ -1,0 +1,22 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.root {
+    width: 100%;
+    composes: root from '../clickable.css';
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 3rem;
+    min-width: 8.75rem;
+    padding: 0 1.5rem;
+    transition: opacity 256ms linear;
+}
+.root:hover {
+    background-color: primary__color;
+}
+.root[disabled] {
+    filter: grayscale(1);
+    opacity: 0.38;
+    pointer-events: none;
+}

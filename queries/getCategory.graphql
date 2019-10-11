@@ -1,0 +1,73 @@
+query category(
+        $id: Int!,
+        $pageSize: Int!, 
+        $currentPage: Int!, 
+        $sort: ProductSortInput,
+        $filterLayer: [LayerFilterInput]
+    ) {
+        category(id: $id) {
+            id
+            description
+            name
+            product_count
+            default_sort_by
+            image
+            display_mode
+            filters (filter: $filterLayer) {
+                items {
+                    name
+                    code
+                    items {
+                        value
+                        name
+                        count
+                        text
+                    }
+                }
+            }
+            products(pageSize: $pageSize, currentPage: $currentPage, sort: $sort, filterList: $filterLayer) {
+                items {
+                    id
+                    sku
+                    type_id
+                    name
+                    small_image {
+                        url
+                    }
+                    url_key
+                    price {
+                        regularPrice {
+                            amount {
+                                value
+                            }
+                            adjustments {
+                                amount {
+                                    value
+                                }
+                                code
+                                description
+                            }
+                        }
+                        minimalPrice {
+                            amount {
+                                value
+                            }
+                            adjustments {
+                                amount {
+                                    value
+                                }
+                                code
+                                description
+                            }
+                        }
+                    }
+                    special_price
+                    is_available
+                }
+                total_count
+            }
+            meta_title
+            meta_keywords
+            meta_description
+        }
+    }

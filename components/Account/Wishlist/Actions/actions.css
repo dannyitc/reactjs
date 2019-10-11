@@ -1,0 +1,36 @@
+.formWishlistItems {
+    text-align: left;
+}
+.formWishlistItems h1{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.actions {
+    text-align: right;
+}
+.actions button, .actions button:hover, .actions button:focus {
+    background: #1369ab;
+    border: 1px solid #1979c3;
+    color: white;
+    box-shadow: none;
+    height: 36px;
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 36px;
+    min-width: 120px;
+    text-align: left;
+    margin: 15px 0 15px 15px;
+    box-shadow: inset 0 1px 0 0 #ffffff, inset 0 -1px 0 0 rgba(204, 204, 204, 0.3)
+}
+@media (min-width: 770px) {}
+    
+@media (max-width: 480px) {
+    .actions button, .actions button:hover, .actions button:focus {
+        display: block;
+        width: 100%;
+        margin: 0 0 15px;
+        text-align: center;
+        box-shadow: inset 0 1px 0 0 #ffffff, inset 0 -1px 0 0 rgba(204, 204, 204, 0.3)
+    }
+}

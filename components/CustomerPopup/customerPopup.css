@@ -1,0 +1,126 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.forgotPassword button, .forgotPassword button:hover, .forgotPassword button:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 5px;
+    font-size: 13px;
+    line-height: 24px;
+    height: auto;
+    color: primary__color;
+    text-decoration: underline;
+    min-width: 0;
+    font-weight: bold;
+}
+.showCreateAccountButton button, .showCreateAccountButton button:hover, .showCreateAccountButton button:focus {
+    display: inline-block;
+    box-shadow: none;
+    margin: 10px 0;
+}
+
+.forgotPassword {
+    text-align: center;
+}
+.popupClosed {
+    display: none;
+}
+.popupOpen {
+    display: block;
+}
+.signIn_closed {
+    display: none;
+}
+.signIn_open {
+    display: block;
+}
+.createAccountFormOpen {
+    display: block;
+}
+.createAccountFormClose {
+    display: none;
+}
+.forgotPassFormOpen {
+    display: block;
+}
+.forgotPassFormClose {
+    display: none;
+}
+.hidePopupButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.popupWrapper .actions {
+    text-align: center;
+}
+.actions .showCreateAccount, .actions .showSignIn, .actions .showForgotForm {
+    padding: 0 5px;
+    display: inline-block;
+}
+.actions .showCreateAccount button, .actions .showSignIn button, .actions .showForgotForm button,
+.actions .showCreateAccount button:hover, .actions .showSignIn button:hover, .actions .showForgotForm button:hover,
+.actions .showCreateAccount button:focus, .actions .showSignIn button:focus, .actions .showForgotForm button:focus {
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 24px;
+    height: auto;
+    color: primary__color;
+    min-width: 0;
+    font-weight: bold;
+}
+.forgotPassword, .showCreateAccountButton {
+    display: inline-block;
+}
+.showCreateAccountButton button, .showCreateAccountButton button:hover, .showCreateAccountButton button:focus {
+    width: 100%;
+    background: transparent;
+    color: primary__color;
+    height: auto;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.signInForm {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.popupContent {
+    position: relative;
+}
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 99;
+}
+@media (max-width: 1440px) {
+    .createAccountFormOpen {
+        max-height: 520px;
+        overflow-y: auto;
+    }
+}
+@media (min-width: 770px) {
+    .popupWrapper {
+        padding: 25px 50px;
+    }
+    .toggleButtonOpen, .toggleButtonClosed {
+        display: none;
+    }
+}
+@media (max-width: 769px) {
+    .popupWrapper {
+        padding: 30px 15px;
+    }
+    .popupContent {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}

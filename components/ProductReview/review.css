@@ -1,0 +1,143 @@
+.root{
+
+}
+.actions{
+
+}
+.actions button{
+  height: 32px;
+  line-height: 32px;
+  background: #eeeeee;
+  border: none;
+  color: #333333;
+}
+.lead{
+  color: #ff6d00;
+}
+.reviewFormTitle {
+  margin: 0 0 25px;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.2;
+  font-size: 2rem;
+  color: #ff6d00;
+}
+.reviewListTitle {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.reviewList {
+  float: left;
+  width: 100%;
+}
+.ratingDetailsWrap {
+  margin: 0 0 10px;
+  float: left;
+  width: 100%;
+}
+.ratingDetails {
+  float: left;
+  width: 100%;
+  margin: 0;
+}
+.reviewItem {
+  float: left;
+  width: 100%;
+  padding: 0 0 20px;
+}
+.reviewTitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  float: left;
+  width: 100%;
+}
+.starRating {
+  font-size: 25px;
+  line-height: 25px;
+}
+.ratingDetails .ratingLabel {
+  line-height: 25px;
+  margin-right: 10px;
+  float: left;
+}
+.ratingFields h4 {
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+.ratingFields h4:after {
+  content: '*';
+  color: #e02b27;
+  font-size: 0.8rem;
+}
+.ratingDetails .starRating{
+  float: left;
+}
+.ratingFields small {
+  color: red;
+  font-size: 13px;
+}
+.ratingFields {
+  margin-bottom: 20px;
+}
+.reviewForm .starRating {
+  font-size: 25px;
+  margin: 5px 0 15px;
+}
+.reviewForm .ratingLabel {
+  float: left;
+  width: 100%;
+}
+.reviewDetails {
+  float: left;
+  width: 100%;
+}
+.reviewContent {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px;
+}
+.reviewBy {
+  font-size: 13px;
+}
+.reviewDate {
+  color: #bbb;
+  font-style: italic;
+}
+.message {
+    color: #6f4400;
+    font-size: 1.1rem;
+}
+@media (min-width: 770px) {
+  .root {
+    max-width: 500px;
+  }
+  .actions {
+    margin-left: 25.8%;
+  }
+  .reviewForm {
+    max-width: 500px;
+  }
+  .reviewInputField {
+    margin: 0 0 10px;
+    float: left;
+    width: 100%;
+  }
+  .reviewInputField > span {
+    padding: 6px 15px 0 0;
+    text-align: right;
+    width: 25.8%;
+    box-sizing: border-box;
+    float: left;
+  }
+  .reviewInputField > input {
+    width: 74.2%;
+    float: left;
+  }
+  .reviewTitle {
+    margin: 0 0 10px;
+    float: left;
+    width: 100%;
+  }
+}

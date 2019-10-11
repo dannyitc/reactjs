@@ -1,0 +1,17 @@
+.root {
+    display: grid;
+    gap: 0.5rem;
+    justify-items: stretch;
+    padding: 0;
+}
+
+.actions {
+    display: grid;
+    justify-items: center;
+    padding: 1rem 0;
+}
+
+.lead {
+    margin: 1rem 0 0;
+    text-align: center;
+}

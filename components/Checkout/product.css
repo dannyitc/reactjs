@@ -1,0 +1,102 @@
+.root {
+    position: relative;
+    align-content: start;
+    display: grid;
+    grid-gap: 0 1rem;
+    grid-template-areas:
+        'image name'
+        'image options'
+        'image quantity';
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: min-content minmax(54px, 1fr) min-content;
+}
+
+.root_masked {
+    composes: root;
+}
+
+.mask {
+    display: block;
+    background-color: black;
+    position: fixed;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.mask_active {
+    composes: mask;
+}
+
+.image {
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 2px;
+    grid-area: image;
+}
+
+.name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    grid-area: name;
+    padding-top: 0.125rem;
+    color: #D69229;
+}
+
+.options {
+    font-size: 13px;
+    grid-area: options;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    max-height: 54px;
+    overflow-y: auto;
+}
+
+.quantityRow {
+    align-items: center;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas: 'label value';
+    grid-template-columns: 70fr 30fr;
+}
+
+.optionLabel {
+    display: inline-block;
+}
+
+.quantity {
+    margin: 1rem 0 0;
+    font-size: 13px;
+}
+
+.quantityOperator {
+    align-items: center;
+    color: rgb(var(--venia-text-alt));
+    display: inline-flex;
+    margin: 0 0.375rem;
+}
+
+.quantitySelect {
+    background: transparent;
+}
+
+.price {
+    align-items: center;
+    display: inline-flex;
+    font-weight: bold;
+}
+
+.modal {
+    position: absolute;
+    left: -24px;
+    right: -24px;
+    top: -7px;
+    bottom: -7px;
+    background-color: rgb(var(--venia-teal));
+    opacity: 0.1;
+    z-index: 2;
+}

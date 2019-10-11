@@ -1,0 +1,96 @@
+.orderHistory {
+    text-align: left;
+}
+.orderHistory h1{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.orderHistory h2 {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e8e8e8;
+}
+.orderHistory .heading {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+.actions button:last-child, .actions button:last-child:hover, .actions button:last-child:focus {
+    padding: 0;
+    border: none;
+}
+.actions button, .actions button:hover, .actions button:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    height: auto;
+    padding: 0;
+    font-size: 14px;
+    line-height: normal;
+    color: #005a98;
+    min-width: 0;
+    text-align: left;
+    margin: 0 10px 0 0;
+}
+.actions button:hover {
+    text-decoration: underline;
+}
+.popupClosed {
+    display: none;
+}
+.popupOpen {
+    display: block;
+}
+.hidePopupButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.popupOrderDetail {
+    text-align: left;
+}
+@media (min-width: 770px) {
+    .popupWrapper {
+        padding: 30px;
+        overflow: hidden;
+    }
+}
+@media (max-width: 769px) {
+    .popupWrapper {
+        padding: 30px 15px 20px;
+    }
+}
+@media (max-width: 769px) {
+    .orderHistory .heading {
+        display: none;
+    }
+    .orderHistory .orderItem {
+        margin-bottom: 1rem;
+        background: #f5f5f5;
+        padding: 15px;
+        position: relative;
+        overflow: hidden;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .orderItem > div:before {
+        padding-right: 10px;
+        content: attr(data-heading) ': ';
+        display: inline-block;
+        color: #111111;
+        font-weight: 700;
+    }
+}
+@media (min-width: 770px) {
+    .orderHistory .heading, .orderHistory .orderItem {
+        display: grid;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+        grid-template-areas: 'orderId orderDate shipTo orderTotal orderStatus actions';
+        grid-template-columns: 20fr 20fr 20fr 20fr 20fr 40fr;
+        margin-bottom: 1rem;
+        font-size: 14px;
+    }
+}

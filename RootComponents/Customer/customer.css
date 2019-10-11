@@ -1,0 +1,73 @@
+.root {
+    max-width: 1170px;
+    margin: 30px auto;
+    padding: 0;
+}
+.customerNav {
+    text-align: left;
+}
+.customerNav button, .customerNav button:focus {
+    background: transparent;
+    border-bottom: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    box-shadow: none;
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 40px;
+    height: 40px;
+    color: #333333;
+    min-width: 0;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+.customerNav button:hover {
+    background: #f90;
+    border-bottom: 1px solid #f90;
+    color: #fff;
+}
+.customerNav button:first-child {
+    border-top: 1px solid #e8e8e8;
+}
+@media (min-width: 770px) {
+    .customerNavButtonOpen, .customerNavButtonClosed {
+        display: none;
+    }
+    .customerNavClosed {
+        display: block;
+    }
+    .customerNavOpen {
+        display: block;
+    }
+}
+@media (min-width: 770px) and (max-width: 1199px) {
+    .root {
+        padding: 0 1rem;   
+    }
+}
+@media (max-width: 769px) {
+    .customerNav {
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    .customerNavButtonOpen, .customerNavButtonClosed {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .customerNavClosed {
+        display: none;
+    }
+    .customerNavOpen {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        background: #fff;
+    }
+    .customerPages {
+        padding: 20px;
+    }
+}

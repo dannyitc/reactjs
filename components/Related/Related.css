@@ -1,0 +1,99 @@
+.relatedWrapper,
+.relatedSlider, 
+.items, 
+.productName, 
+.priceWrapper, 
+.productPrice, 
+.btnNow {
+}
+
+.relatedWrapper{
+    padding: 20px 0 70px 0;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: normal;
+    margin-top: 20px;
+    color: #777;
+}
+.items{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background-color: white;
+    text-align: center;
+    line-height: 1.2em;
+}
+.relatedWrapper h2{
+    font-size: 25px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.items img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.productName {
+    overflow: hidden;
+    height: 2.6em;
+    margin: 5px 10px;
+    font-weight: bold;
+    font-size: 13px;
+}
+.productPrice{
+    font-size: 13px;
+    font-weight: 400;
+}
+.btnNow {
+    font-family: "Oswald";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 10px 10px 5px 10px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #D69229;
+    color: white;
+    line-height: 1em;
+    display: inline-block;
+    font-weight: 700;
+}
+@media (max-width: 767px){
+    .btnNow {
+        padding: 10px 13px;
+    }
+    .relatedWrapper {
+        padding: 20px 10px 70px 10px;
+    }
+    .items img {
+        max-height: 128px;
+    }
+}
+
+@media (min-width: 1200px){
+    .relatedWrapper{
+        padding-left:20px;
+        padding-right: 20px;
+    }
+    .items img {
+        max-height: 144px;
+    }
+}
+@media (min-width: 1440px){
+    .items img {
+        max-height: 170px;
+    }
+}
+@media (min-width: 1600px){
+    .items img {
+        max-height: 180px;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1024px){
+    .items img {
+        min-height: 110px;
+        max-height: 110px;
+    }
+}

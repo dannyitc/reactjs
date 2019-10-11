@@ -1,0 +1,66 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.body {
+    position: relative;
+    overflow: hidden;
+}
+.body h2{
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 20px;
+    color: primary__color;
+}
+.subTitle {
+    margin: 1rem 0;
+}
+@media (max-width: 360px) {
+    .body {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}
+@media (max-width: 769px) {
+    .contactForm .contactField > p {
+        padding: 0.5rem 0;
+    }
+}
+@media (min-width: 770px) {
+    .contactForm .contactField {
+        display: block;
+        margin-bottom: 20px;
+        float: left;
+        width: 100%;
+    }
+    .contactForm .contactField > span {
+        float: left;
+        width: 75%;
+        display: block;
+    }
+    .contactForm .contactField > span:first-child {
+        float: left;
+        width: 25%;
+    }
+    .contactForm .contactField > textarea {
+        float: left;
+        width: 75%;
+    }
+    .contactForm .contactField > p {
+        margin-left: 25%;
+    }
+    .textInput {
+        width: 74.2%;
+    }
+}
+.footer {
+    margin-top: 1rem;
+    text-align: right;
+}
+.itemActionLoading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 99;
+}

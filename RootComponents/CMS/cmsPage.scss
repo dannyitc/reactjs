@@ -1,0 +1,55 @@
+.cmsContent h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.cmsContent p {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+.cmsContent h2 {
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.cmsContent ul {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  list-style-type: disc;
+}
+.cmsContent li {
+  margin-bottom: 10px;
+}
+.cmsContent .data-table {
+  text-align: left
+}
+.cmsContent .data-table th, .cmsContent .data-table td {
+  padding: 10px;
+  font-size: 14px;
+}
+.block-collapsible-nav-title {
+  display: none;
+}
+.block-collapsible-content {
+  background: #f5f5f5;
+  padding: 15px 0;
+}
+.block-collapsible-content ul{
+  list-style: none;
+  padding: 0;
+}
+.block-collapsible-content ul .item a{
+  border-left: 3px solid transparent;
+  color: #575757;
+  display: block;
+  padding: 5px 18px 5px 15px;
+}
+.block-collapsible-nav .item a:hover {
+  background: #e8e8e8;
+}
+.block-collapsible-nav .item.current a, .block-collapsible-nav .item.current > strong {
+  border-color: #ff5501;
+  color: #000000;
+  font-weight: 600;
+}

@@ -1,0 +1,39 @@
+.root {
+    display: block;
+    width: 100%;
+    background-color: white;
+    border: none;
+}
+.root:focus {
+    background-image: radial-gradient(circle, rgb(var(--venia-grey)), white);
+    outline: 0 none;
+}
+
+.content {
+}
+
+.label {
+    color: rgb(var(--venia-teal));
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    text-align: left;
+    padding: 1rem 0;
+}
+
+.summary {
+    font-size: 13px;
+    justify-self: stretch;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    text-align: left;
+    padding: 1rem 0;
+}
+
+.icon * {
+    vertical-align: sub;
+    height: 1rem;
+}

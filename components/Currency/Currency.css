@@ -1,0 +1,80 @@
+.switcherOptions {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 5px 10px 5px 0;
+    vertical-align: middle;
+    margin: 12px 2px 0;
+    cursor: pointer;
+}
+.switcherOptions button:focus{
+    outline: none;
+}
+.switcherOptions strong {
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: top;
+    color: #b0b0b0;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+    padding-right: 10px;
+}
+
+
+.switcherOptions strong::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    transform: rotate(45deg);
+    display: block;position: absolute;
+    top: 50%;right: 0;
+    margin-top: -4px;
+}
+
+.switcherDropdown{
+    background: #fff;
+    width: auto;
+    font-family: inherit;
+    padding: 0;
+    border-bottom: none;
+    position: absolute;
+    margin-top: 5px;
+    min-width: 160px;
+    z-index: 100;
+    box-sizing: border-box;
+}
+.switcherOption a{
+    display: block;
+    padding: 8px 10px;
+    color: #777;
+    font-size: 11px;
+}
+.switcherDropdown:before, 
+.switcherDropdown:after {
+    border: 7px solid;
+    border-color: transparent transparent #fff;
+    z-index: 98;
+    left: 9px;
+    top: -14px;
+    border-bottom-style: solid;
+    content: '';
+    display: block;
+    position: absolute;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .switcherOptions{
+        display: table-cell;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .switcherOptions {
+        display: none;
+    }
+}

@@ -1,0 +1,56 @@
+.tabRoot {
+}
+.tabList {
+    border-bottom: 1px solid rgb(var(--venia-border));
+    padding-left: 0;
+}
+.tabContent {
+    padding: 1rem;
+    font-size: 14px;
+    background-color: #fff;
+}
+.tabContent > tbody tr > th {
+    padding: 5px 30px 10px 0
+}
+@media (max-width: 1024px) {
+    .tabRoot {
+        margin: 1rem 1.5rem 0;
+    }
+}
+@media (min-width: 770px) {
+    .tabList {
+        height: 49px;
+    }
+    .tabContent {
+        margin-top: 50px;
+        box-sizing: border-box;
+        float: right;
+        margin-left: -100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 769px) {
+    .tabRoot {
+        margin: 1rem 1rem;
+        overflow: hidden;
+    }
+    .tabList {
+        border: none;
+    }
+    .tabContent {
+        clear: both;
+        padding: 1rem 0;
+        font-size: 12px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .tabContent{
+        clear: inherit;
+        margin-top: 50px;
+        box-sizing: border-box;
+        float: right;
+        margin-left: -100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,154 @@
+@value colors: "../../../components/variables.css";
+@value primary__color, secondary__color from colors;
+.root {
+    position: relative;
+}
+
+.body {
+    grid-gap: 0.5rem;
+}
+
+.footer {
+    margin: 1rem 0 0;
+    text-align: right;
+}
+
+.footer button {
+    background-color: #eee;
+    color: #333;
+    border-radius: 0;
+    padding: 15px 17px;
+    border: none;
+    height: auto;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.footer button:hover {
+    background: primary__color;
+    color: #fff;
+}
+
+.heading {
+    font-size: 1.6rem;
+    border-bottom: 1px solid #e4e4e4;
+    font-weight: 500;
+    grid-column-end: span 2;
+    padding: 0 0 0.75rem 0;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 99;
+}
+
+/* fields */
+
+.textInput {
+    background: white;
+    border: 1px solid rgb(var(--venia-border));
+    border-radius: 2px;
+    color: rgb(var(--venia-text));
+    display: inline-flex;
+    flex: 0 0 100%;
+    font-size: 0.9375rem;
+    height: 2.5rem;
+    padding: calc(0.375rem - 1px) calc(0.625rem - 1px);
+    width: 100%;
+}
+
+.textInput:focus {
+    border-color: rgb(var(--venia-border));
+    outline: 0 none;
+}
+
+.city,
+.firstname,
+.lastname,
+.postcode,
+.region_code,
+.street0,
+.telephone {
+    grid-column-end: span 1;
+    margin-bottom: 1rem;
+}
+
+.email,
+.street0 {
+    grid-column-end: span 2;
+}
+
+.validation {
+    grid-column-end: span 2;
+    line-height: normal;
+}
+.addressContent .addressContactInfo, .addressContent .addressDetails {
+    background: #f5f5f5;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: inset 3px 3px 10px #fff;
+    border: 1px solid #ddd;
+}
+.addressContent .boxTitle {
+    margin-bottom: 1rem;
+    display: block;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #000;
+}
+.addressField {
+    margin-bottom: 20px;
+}
+.address_check label {
+    font-size: 13px;
+    float: left;
+    /* width: 100%; */
+    text-align: left;
+    justify-items: left;
+    clear: both;
+}
+.address_check label span {
+    font-size: 13px;
+}
+@media (max-width: 769px) {
+    .footer button {
+        display: block;
+        width: 100%;
+    }
+}
+@media (min-width: 770px) {
+    .addressContent {
+        max-width: 600px;
+    }
+    .textInput {
+        width: 74.2%;
+    }
+}
+@media (min-width: 770px) {
+    .addressContent {
+        max-height: 400px;
+        overflow-x: auto;
+    }
+}
+@media (min-width: 1400px) {
+    .addressContent {
+        max-height: 800px;
+        overflow-x: auto;
+    }
+}
+@media (max-width: 769px) {
+    .addressContent {
+        max-height: 400px;
+        overflow-x: auto;
+    }
+}

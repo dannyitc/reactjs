@@ -1,0 +1,17 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.root {
+    margin-left: 0;
+    background: transparent;
+    color: #fff;
+    padding: 3px 0 3px 3px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .root {
+        color: #b0b0b0;
+    }
+}

@@ -1,0 +1,607 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.root {
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-row-gap: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.open {
+    composes: root;
+}
+
+.closed {
+    composes: root;
+}
+
+.toolbar {
+    align-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-areas: 'primary secondary third';
+    grid-template-columns: 25fr 70fr 25fr;
+    grid-template-rows: 3rem;
+    min-height: 3.5rem;
+    padding: 25px 0;
+}
+
+.accountLinks {
+    display: inline-flex;
+}
+.headerContact {
+    background: #008bff;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 5px;
+    font-style: italic;
+    text-decoration: underline;
+}
+.infoSupport {
+    text-align: left;
+    float: left;
+    padding: 5px 0;
+}
+.infoSupport ul li {
+    display: inline-block;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 10px 0 0;
+    height: 30px;
+}
+.infoSupport ul li a > *{
+    float: left;
+    line-height: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.infoSupport ul li a{
+    text-decoration: underline;
+    display: inline-block;
+    width: 100%;
+}
+.miniCartWrapper {
+    display: inline-flex;
+    position: relative;
+}
+.miniCartContentWrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    min-width: 20rem;
+    display: none;
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.miniCartWrapper:hover .miniCartContentWrapper {
+    display: block;
+}
+.headerLinks {
+    text-align: right;
+}
+.headerLinkItem {
+    padding: 0 5px;
+    font-size: 13px;
+    float: left;
+    line-height: 24px;
+    color: #333333;
+    font-weight: normal;
+}
+.headerLinkItem button, .headerLinkItem button:hover, .headerLinkItem button:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 5px;
+    font-size: 13px;
+    line-height: 24px;
+    height: auto;
+    color: #333333;
+    min-width: 0;
+    font-weight: normal;
+}
+.rightSection {
+    text-align: center;
+}
+.rightSection p {
+    text-align: left;
+    line-height: 25px;
+}
+.forgotPassword button, .forgotPassword button:hover, .forgotPassword button:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 5px;
+    font-size: 13px;
+    line-height: 24px;
+    height: auto;
+    color: primary__color;
+    text-decoration: underline;
+    min-width: 0;
+    font-weight: normal;
+}
+.showCreateAccountButton button, .showCreateAccountButton button:hover, .showCreateAccountButton button:focus {
+    display: inline-block;
+    box-shadow: none;
+    margin: 10px 0;
+}
+.menuActions {
+    text-align: right;
+}
+.secondarySection {
+    grid-area: secondary;
+    width: 100%;
+    text-align: right;
+}
+.navTrigger,
+.cartTrigger {
+    composes: root from '../clickable.css';
+    height: 3rem;
+    width: 3rem;
+}
+
+.primaryActions {
+    grid-area: primary;
+    justify-self: start;
+}
+
+.secondaryActions {
+    grid-area: secondary;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+}
+.forgotPassword {
+    text-align: center;
+}
+.popupClosed {
+    display: none;
+}
+.popupOpen {
+    display: block;
+}
+.signIn_closed {
+    display: none;
+}
+.signIn_open {
+    display: block;
+}
+.createAccountFormOpen {
+    display: block;
+}
+.createAccountFormClose {
+    display: none;
+}
+.forgotPassFormOpen {
+    display: block;
+}
+.forgotPassFormClose {
+    display: none;
+}
+.popupWrapper {
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 100;
+    left: 0;
+}
+.hidePopupButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.popupWrapper .actions {
+    text-align: center;
+}
+.actions .showCreateAccount, .actions .showSignIn, .actions .showForgotForm {
+    padding: 0 5px;
+    display: inline-block;
+}
+.actions .showCreateAccount button, .actions .showSignIn button, .actions .showForgotForm button,
+.actions .showCreateAccount button:hover, .actions .showSignIn button:hover, .actions .showForgotForm button:hover,
+.actions .showCreateAccount button:focus, .actions .showSignIn button:focus, .actions .showForgotForm button:focus {
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 24px;
+    height: auto;
+    color: primary__color;
+    min-width: 0;
+    font-weight: bold;
+}
+
+
+.socialWrapper{
+    display: block;
+    margin: 0 auto;
+    max-width: 120px;
+    font-family: 'Poppins';
+    font-size: 13px;
+    color: #b0b0b0;
+    text-align: center;
+}
+.socialItems{
+    display: inline-block;
+    margin-right: 3px;
+    margin-bottom: 9px;
+}
+.socialItems a img {
+    width: 34px;
+    height: 34px;
+    background-color: #33332f;
+}
+.copyright{
+    font-size: 13px;
+    color: #b0b0b0;
+    text-align: center;
+    margin-top: 10px;
+}
+.headerTop{
+    padding: 0 5px;
+}
+.headerContainer{
+
+}
+.searchMobile{
+    display: none;
+}
+
+@media (min-width: 770px) {
+    .root {
+        padding: 0;
+    }
+    .primaryActions {
+        display: none;
+    }
+    .toggleButtonOpen, .toggleButtonClosed {
+        display: none;
+    }
+    .customerLinks {
+        display: inline-flex;
+    }
+    .popupContent {
+        position: absolute;
+        background: #fff;
+        padding: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        min-width: 600px;
+        max-width: 760px;
+    }
+    .signIn_open .signInForm {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'signInForm createAccountLink';
+        grid-template-columns: 50fr 50fr;
+        text-align: left;
+    }
+    .headerMiniCartContent {
+        display: none;
+    }
+    .headerMiniCart:hover > button {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: 11;
+    }
+    .headerMiniCart:hover > button:after {
+        content: '';
+        position: absolute;
+        border: 10px solid;
+        border-color: transparent transparent #fff transparent;
+        z-index: 3;
+        left: 10px;
+        bottom: -10px;
+    }
+    .headerMiniCart:hover .headerMiniCartContent {
+        display: block;
+    }
+    .headerFixed .headerMiniCart{
+        position: fixed;
+        z-index: 4;
+        top: 0;
+        left: 50%;
+        max-width: 1170px;
+        margin: 0 auto;
+        width: 100%;
+        transform: translate(-50%, 0);
+    
+    }
+    .headerFixed .headerMiniCart > button {
+        position: absolute;
+        top: 0;
+        right: 0;
+    
+    }
+    .headerFixed .headerMiniCart > button:after{
+        content: none;
+    }
+    .headerFixed .headerMiniCart:hover > button {
+        background: #fff;
+    }
+    .headerFixed .headerMiniCart:hover > button:after{
+        background: #fff;
+        content: '';
+        height: 15px;
+        width: 100%;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        background: #fff;
+    }
+    .headerFixed .headerMiniCart:hover .headerMiniCartContent > div {
+        position: static;
+    }
+    .headerFixed .headerMiniCart:hover .headerMiniCartContent > div > div {
+        top: 50px;
+        max-width: 400px;
+    }
+}
+@media (max-width: 769px) {
+    .toolbar {
+        text-align: center;
+        grid-template-columns: 15fr 70fr 15fr;
+        padding: 10px 0;
+    }
+    .infoSupport ul li {
+        padding: 0 5px;
+    }
+    .menuActions {
+        grid-area: primary;
+        text-align: center
+    }
+
+    .headerMiniCart {
+
+    }
+    .headerBottomContainer {
+        margin: 0 1rem;
+    }
+    .accountLinks {
+        float: left;
+        width: 25%;
+    }
+    .customerLinks {
+        float: right;
+    }
+    .headerLinksClosed {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #333;
+        padding: 20px;
+    }
+    .toggleButtonOpen {
+        background-color: primary__color;
+        color: #fff;
+    }
+    .toggleButtonOpen, .toggleButtonClosed {
+        transition-property: color;
+        transition-duration: 224ms;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        height: 50px;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .headerLinksOpen {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #333;
+        padding: 20px;
+        z-index: 2;
+    }
+    .headerLinkItem {
+        width: 100%;
+        text-align: left;
+        font-size: 15px;
+        line-height: 35px;
+    }
+    .headerLinkItem button, .headerLinkItem button:hover, .headerLinkItem button:focus {
+        display: block;
+    }
+    .popupContent {
+        position: absolute;
+        background: #fff;
+        padding: 30px;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+    }
+}
+@media (min-width: 770px) and (max-width: 1199px) {
+    .infoSupport ul li {
+        padding: 0 10px;
+    }
+    .toolbar {
+        padding: 25px 10px;
+    }
+}
+@media (min-width: 992px) {
+    .toolbar {
+        grid-template-areas: 'primary' 'secondary';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 0 20px;
+    }
+    .headerLogo {
+        margin: 30px 0;
+        max-width: none;
+        position: relative;
+        grid-area: primary;
+    }
+    .headerLogo img {
+        max-width: 223px;
+        display: block;
+        margin: 0 auto;
+    }
+    .headerWrapper{
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        width: 350px;
+        min-height: 100vh;
+        background-color: rgba(0,0,0,.7);
+        border: 0;
+        padding: 10px 15px 200px;
+    }
+    .socialWrapper { 
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .copyright{
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 100%;
+        width: 300px;
+        position: absolute;
+    }
+    .copyright address {
+        line-height: 13px;
+    }
+    
+}
+@media (min-width: 992px) {
+    .headerMiniCart {
+        position: relative;
+        float: right;
+    }
+}
+@media (min-width) 1024px) {
+    .headerLogo {
+        grid-area: primary;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .headerWrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        text-align: left;
+        padding: 10px 15px;
+        background-color: rgba(0,0,0,.7);
+        z-index: 2;
+    }
+    .headerTop {
+        display: table;
+        padding-left: 20px;
+    }
+    .headerTop .switcherOptions{
+        display: table-cell;
+    }
+    .headerTop .headerMiniCart {
+        display: table-cell;
+    }
+    .socialWrapper,.copyright{
+        display: none;
+    }
+    .toolbar .menuActions{
+        display: none;
+    }
+    .toolbar {
+        grid-template-areas: 'secondary third';
+        grid-template-columns: 300px 1fr;
+        padding: 10px 20px;
+    }
+    .secondarySection {
+        grid-area: third;
+    }
+    .headerLogo img {
+        max-width: 110px;
+        height: 49px;
+        float: left;
+    }
+    .headerLogo {
+        grid-area: secondary;
+    }
+}
+
+@media (max-width: 767px) {
+        
+    .headerLogo {
+        grid-area: secondary;
+    }
+    .headerWrapper{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        text-align: left;
+        padding: 10px 15px 0 15px;
+        background-color: rgba(0,0,0,.7);
+        z-index: 100;
+        top: 0;
+    }
+    .toolbar {
+        grid-template-columns: 50px 1fr;
+        grid-template-areas: 'primary secondary';
+    }
+    .secondarySection-{
+        grid-area: secondary;
+        width: 100%;
+        text-align: right;
+        position: absolute;
+        padding: 0 20px;
+        bottom: -60px;
+        background-color: rgba(0,0,0,.7);
+    }
+    .menuActions .root{
+        color: #b0b0b0;
+    }
+    .toolbar {
+        grid-template-columns: 50px 1fr;
+        grid-template-areas: 'primary secondary';
+        padding: 15px 0 0  0;
+    }
+    .headerLogo img {
+        max-width: 145px;
+        height: 50px;
+        float: left;
+    }
+    .headerLogo {
+        padding-left: 15px;
+    }
+    .socialWrapper,.copyright{
+        display: none;
+    }
+    .searchMobile{
+        display: block;
+    }
+    .searchMobile button{
+        float: right;
+        padding-right: 25px;
+        color: #b0b0b0;
+    }
+    .bannerHomeContent h2 b {
+        border-bottom: 75px solid #292525;
+    }
+}
+@media (max-width: 320px){
+    .headerLogo {
+        padding-left: 5px;
+    }
+}

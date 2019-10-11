@@ -1,0 +1,21 @@
+query compare_list {
+    compare_list {
+        id
+        sku
+        small_image
+        url_key
+        name
+        price
+        currency
+        special_price
+        final_price
+        type_id
+        description
+        is_available
+        attributes {
+            code
+            label
+            value
+        }
+    }
+}

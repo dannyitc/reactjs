@@ -1,0 +1,44 @@
+@value colors: "../../variables.css";
+@value primary__color, secondary__color from colors;
+.cartActions {
+    text-align: right;
+}
+.cartActions button {
+    background: #eee;
+    padding: 0 15px;
+    font-size: 0.9rem;
+    height: 40px;
+}
+.cartActions button:hover {
+    background: primary__color;
+    color: #fff;
+}
+.cartActions button span {
+    float: left;
+    margin-right: 5px;
+}
+@media (max-width: 769px) {
+    .cartActions {
+        text-align: center;
+    }
+    .cartActions button {
+        clear: both;
+        width: 100%;
+        max-width: 60%;
+        margin: 0 0 1rem;
+    }
+    .continueShoppingButton {
+        float: none;
+        display: inline-block;
+    }
+}
+.continueShoppingButton {
+    float: left;
+}
+.updateCartButton {
+    float: right;
+}
+.clearCartButton {
+    float: right;
+    margin-right: 10px; 
+}

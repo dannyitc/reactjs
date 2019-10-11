@@ -1,0 +1,36 @@
+.tableCompareWrapper {
+    overflow: hidden;
+    font-size: 14px;
+}
+.tableCompareWrapper h1 {
+    margin: 0 0 1rem;
+}
+.tableCompare {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+}
+.tableCompare td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+@media (min-width: 770px) and (max-width: 1199px) {
+    .tableCompareWrapper {
+        overflow: auto;
+        max-height: 400px
+    }
+}
+@media (min-width: 1200px) {
+    .tableCompareWrapper {
+        overflow: auto;
+        max-height: 500px
+    }
+}
+@media (max-width: 769px) {
+    .tableCompareWrapper {
+        max-height: 300px;
+        overflow: auto;
+    }
+}

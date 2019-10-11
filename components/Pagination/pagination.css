@@ -1,0 +1,60 @@
+@value colors: "../variables.css";
+@value primary__color, secondary__color from colors;
+.root {
+    display: grid;
+    grid-auto-columns: 32px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1px;
+    justify-content: right;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+}
+
+.tileButton {
+    grid-row-start: 1;
+    outline: none;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    color: #706f6c;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.tileButtonCurrent {
+    grid-row-start: 1;
+    outline: none;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    color: #706f6c;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-color: #D69229;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.tileButton:hover {
+    background-color: transparent;
+    color: #706f6c;
+    border-color: #D69229;
+}
+@media (max-width: 767px) {
+    .root {
+        padding: 0;
+        grid-column-gap: 1px;
+        justify-content: center;
+        order: 1;
+        width: 100%;
+    }
+    .limiterFormBottom {
+        display: grid !important;
+        order: 2;
+        width: 100%;
+        margin-top: 20px;
+    }
+}

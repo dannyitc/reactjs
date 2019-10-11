@@ -1,0 +1,23 @@
+.root {
+    display: block;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: left;
+    padding: 1rem 0;
+    text-align: left;
+}
+
+.emptyTitle {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.emptyCart p {
+    line-height: 1.25;
+}
+.emptyCart p a{
+    padding: 0 0.5rem;
+    color: #f90;
+}

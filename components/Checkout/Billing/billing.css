@@ -1,0 +1,16 @@
+.address_check {
+    margin: 1rem 0 0;
+}
+.paymentMethodBilling {
+   
+}
+.billingAddressData {
+    padding: 10px;
+}
+.fieldSelectBilling {
+    margin: 10px 0 20px;
+    max-width: 500px;
+}
+.actions {
+    text-align: right;
+}

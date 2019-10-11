@@ -1,0 +1,8 @@
+.root {
+    height: 100%;
+    width: 100%;
+    transition: background-image 0.3s ease-in-out;
+}
+img {
+    max-width: 100%;
+}

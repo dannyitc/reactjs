@@ -1,0 +1,47 @@
+.limiterForm {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1px;
+    justify-content: right;
+    background-color: white;
+}
+.limiterForm > * {
+    display: grid;
+    grid-row-start: 1;
+    outline: none;
+    line-height: 36px;
+    font-size: 14px;
+}
+.limiterFormBottom{
+    justify-content: left;
+}
+.limiterForm > span {
+    margin:0 5px;
+}
+.limiterSelection > *{
+    height: 36px;
+    line-height: 36px;
+}
+.limiterSelection select {
+    font-size: 14px;
+}
+@media (max-width: 767px) {
+    .limiterForm {
+        display: none;
+    }
+    .limiterFormBottom {
+        display: grid !important;
+        order: 2;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .limiterForm > label:last-child {
+        display: none;
+    }
+    .limiterForm {
+        justify-content: center;
+    }
+}
